@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from transformers import GPT2TokenizerFast
-from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
@@ -74,7 +73,7 @@ df = pd.DataFrame({'Token Count': token_counts})
 df.hist(bins=40, )
 
 # Show the plot
-plt.show()
+# plt.show()
 
 # Get embedding model
 embeddings = OpenAIEmbeddings()
